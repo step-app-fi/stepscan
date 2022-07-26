@@ -49,6 +49,12 @@ ADD . .
 
 COPY . .
 
+ARG COIN
+ARG COIN_NAME
+ARG NETWORK_PATH
+ARG CHAIN_ID
+ARG JSON_RPC
+ARG SUBNETWORK
 RUN if [ "$COIN" != "" ]; then \
         sed -i s/"POA"/"${COIN}"/g apps/block_scout_web/priv/gettext/en/LC_MESSAGES/default.po; \
         sed -i "/msgid \"Ether\"/{n;s/msgstr \"\"/msgstr \"${COIN}\"/g}" apps/block_scout_web/priv/gettext/default.pot; \
