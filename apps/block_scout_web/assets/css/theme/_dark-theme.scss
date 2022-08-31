@@ -185,6 +185,7 @@ $dark-stakes-banned-background: #3e314c;
 		border-right-color: $dark-light;
 		background-color: $dark-light;
 		color: $labels-dark;
+		border: 0.5px solid white;
 		&:not([class^="tile tile-type"]) {
 			border-left-color: $dark-light;
 		}
@@ -199,7 +200,10 @@ $dark-stakes-banned-background: #3e314c;
 		}
 	}
 	.tile-bottom-contents {
-		background-color: $dark-bg;
+		background-color: transparent;
+	}
+	.tile-bottom-contents .tile-transactions {
+		color: white;
 	}
 	a.tile-title {
 		color: #fff !important;
@@ -226,9 +230,7 @@ $dark-stakes-banned-background: #3e314c;
 	.fade-up-blocks-chain .tile-type-block-animation .tile-type-line-up {
 		background-color: $dark-primary;
 	}
-	.tile.tile-type-block {
-		border-left-color: $dark-primary
-	}
+
 	.tile.tile-type-block .tile-status-label {
 		color: $dark-primary;
 	}
