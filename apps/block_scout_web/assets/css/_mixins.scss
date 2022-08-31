@@ -116,29 +116,31 @@
   }
 }
 
-@mixin btn-line($bg-color: #fff, $text-color: $secondary, $font-size: 12px) {
+@mixin btn-line($bg-color: #fff, $text-color: black, $font-size: 12px) {
   -webkit-appearance: none !important;
   align-items: center;
   background-color: $bg-color;
-  border-radius: 2px;
-  border: 1px solid $text-color;
-  color: $text-color;
+  border-radius: 8px;
+  border: 1px solid #F3F3F3;
+  color: black;
   cursor: pointer;
   display: flex;
   font-size: $font-size;
-  font-weight: 600;
-  height: 36px;
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  height: 40px;
   justify-content: center;
   outline: none;
-  padding: 0 15px;
+  padding: 0 16px;
   text-decoration: none;
   transition: $transition-cont;
   white-space: nowrap;
   width: fit-content;
-  font-weight: 400;
 
   &:hover {
-    background-color: $text-color;
+    background-color: black;
     color: $bg-color;
     text-decoration: none;
 
@@ -153,7 +155,7 @@
 
   path {
     transition: $transition-cont;
-    fill: $text-color;
+    fill: black;
   }
 
   &.full-width {
@@ -164,8 +166,8 @@
     &,
     &:hover {
       background-color: $bg-color!important;
-      border-color: $primary!important;
-      color: $primary!important;
+      border-color: #F3F3F3!important;
+      color: black!important;
       cursor: default;
       opacity: 0.5;
     }
