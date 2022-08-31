@@ -53,24 +53,24 @@ $tile-type-block-color: $secondary;
 $tile-type-progress-bar-color: $secondary;
 
 a {
-  color: $secondary;
+  color: black;
 }
 
 a:hover, a:focus {
-  color: $secondary;
+  color:black;
 }
 
 .tile .tile-body a,
 .tile a:hover,
 .tile span[data-address-hash],
 .tile a[data-test=token_link]
-a.tile-title { color: $secondary !important; }
+a.tile-title { color: black; }
 .card-body {  
   a:not(.dropdown-item):not(.button):not([data-test=address_hash_link]):not(.alert-link):not(#dropdown-tokens):not(.btn-line):not(.page-link):not(.active) {
-    color: $secondary;
+    color: black;
 
     &:hover {
-      color: $secondary;
+      color: black;
     }
   }
 }
@@ -149,10 +149,6 @@ $dashboard-line-color-transactions-dark-theme: $secondary;
   .tile a[data-test=token_link] {
       color: $labels-dark !important;
   }
-
-  .tile.tile-type-block {
-		border-left-color: $secondary !important;
-	}
 
   a {
     color: $labels-dark;
