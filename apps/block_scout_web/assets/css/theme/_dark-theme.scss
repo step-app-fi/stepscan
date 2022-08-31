@@ -143,8 +143,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.card {
-		background-color: $dark-light-bg;
-		box-shadow: 0 0 30px 0 rgba(23, 24, 41, 0.5);
+		background-color: #1c1d31;
 	}
 
 	.card-header {
@@ -252,12 +251,12 @@ $dark-stakes-banned-background: #3e314c;
 
 	.btn-line {
 		background-color: transparent;
-		border-color: $dark-primary;
-		color: $dark-primary;
+		border-color: white;
+		color: white;
 		&:hover {
-			border-color: $dark-primary;
-			background-color: $dark-primary;
-			color: #fff;
+			border-color: white;
+			background-color: white;
+			color: #1c1d31;
 		}
 	}
 
