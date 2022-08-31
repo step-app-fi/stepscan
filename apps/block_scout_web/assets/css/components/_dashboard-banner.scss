@@ -21,7 +21,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 
 .dashboard-banner-container {
   @include gradient-container();
-  margin-bottom: 3rem;
+  margin-bottom: 32px;
   overflow: hidden;
   padding: 0;
   position: relative;

@@ -19,7 +19,6 @@ $tile-body-a-color: #5959d8 !default;
 
 @mixin generate-tile-block($prefix, $color, $label-color: false) {
   &#{ $prefix } {
-    border-left: 4px solid $color;
 
     .tile-transaction-type-block {
       a {
@@ -117,14 +116,19 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile-bottom-contents {
-  background-color: #f6f7f9;
+  background-color: white;
   font-size: 12px;
-  line-height: 1.2;
-  padding: 0.8rem 1rem;
+  font-family: 'Roboto Mono';
+  line-height: 100%;
+  font-weight: 500;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: black;
 }
 
 .tile-transactions {
-  color: #a3a9b5;
+  color: black;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
@@ -181,12 +185,12 @@ $tile-body-a-color: #5959d8 !default;
   }
 
   a[data-test=token_link] {
-    color: $tile-body-a-color;
+    color: black;
   }
 
   .tile-body {
     a {
-      color: $tile-body-a-color;
+      color: black;
       &:hover {
         span {
           text-decoration: underline;
@@ -196,21 +200,26 @@ $tile-body-a-color: #5959d8 !default;
   }
 
   .tile-title {
-    color: $tile-title-color;
+    color: black;
     font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
     &-hash {
       font-weight: 300;
     }
 
     &-lg {
-      color: $body-color;
+      color: black;
       font-size: 16px;
     }
   }
-  border-radius: 4px;
-  border: 1px solid $border-color;
-  color: $text-muted;
+  border-radius: 8px;
+  border: 1px solid #F3F3F3;
+  color: black;
   flex-grow: 1;
   font-size: 12px;
   line-height: 1.4rem;
@@ -289,8 +298,8 @@ $tile-body-a-color: #5959d8 !default;
     .tile-title {
       font-weight: 700;
       line-height: 1.2;
-      margin-bottom: 12px;
-      padding: 1rem 1rem 0 1rem;
+      margin-bottom: 55px;
+      padding: 12px 16px 0 1rem;
     }
   }
 
