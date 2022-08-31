@@ -1,7 +1,7 @@
 $card-background-color: #fff !default;
 $card-tab-active: $primary !default;
 $card-default-border-radius: 10px !default;
-$card-horizontal-padding: 30px;
+$card-horizontal-padding: 0px;
 $card-vertical-padding: 30px;
 $card-background-1: $primary !default;
 $card-background-1-text-color: #fff !default;
@@ -12,7 +12,6 @@ $card-tab-icon-color-active: #fff !default;
   background-color: $card-background-color;
   border-radius: $card-default-border-radius;
   border: none;
-  box-shadow: 0 0 30px 0 rgba(202, 199, 226, 0.5);
   margin-bottom: $common-container-margin;
 
   .block-details-row {
@@ -51,10 +50,13 @@ $card-tab-icon-color-active: #fff !default;
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.2rem;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.03em;
   margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
 
   &.lg-card-title {
     @media (max-width: 374px) {
