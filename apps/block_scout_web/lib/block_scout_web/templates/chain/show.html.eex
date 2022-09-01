@@ -171,7 +171,7 @@
         <div hidden data-selector="loading-message" class="col-lg-3" >
          <div data-selector="chain-block">
            <div class="tile tile-type-block n-p d-flex flex-column">
-             <a class="tile-title"><span class="tile-loader tile-label-loader"></span> </a> 
+             <a class="tile-title"><span class="tile-loader tile-label-loader"></span> </a>
              <div class="tile-bottom-contents">
                <div class="dark-block-loader"></div>
                <div class="dark-block-loader"></div>
@@ -182,7 +182,7 @@
         <div hidden data-selector="loading-message" class="col-lg-3" >
          <div data-selector="chain-block">
            <div class="tile tile-type-block n-p d-flex flex-column">
-             <a class="tile-title"><span class="tile-loader tile-label-loader"></span> </a> 
+             <a class="tile-title"><span class="tile-loader tile-label-loader"></span> </a>
              <div class="tile-bottom-contents">
                <div class="dark-block-loader"></div>
                <div class="dark-block-loader"></div>
@@ -200,7 +200,7 @@
             </div>
            </div>
          </div>
-        </div>   
+        </div>
       </div>
     </div>
   </div>
@@ -210,10 +210,14 @@
   <div class="card card-chain-transactions">
     <div class="card-body">
       <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right") %>
-      <h2 class="card-title lg-card-title"><%= gettext "Transactions" %></h2>
-      <div data-selector="channel-batching-message" style="display: none;">
-        <div data-selector="reload-transactions-button" class="alert alert-info">
-          <a href="#" class="alert-link"><span data-selector="channel-batching-count"></span> <%= gettext "More transactions have come in" %></a>
+      <div class="row_span">
+        <div>
+          <h2 class="card-title lg-card-title"><%= gettext "Transactions" %></h2>
+        </div>
+        <div data-selector="channel-batching-message" style="display: none;">
+          <div data-selector="reload-transactions-button" class="alert alert-info">
+            <a href="#" class="alert-link"><span data-selector="channel-batching-count"></span> <%= gettext "More transactions have come in" %></a>
+          </div>
         </div>
       </div>
       <span data-selector="transactions-list" data-transactions-path="<%= @transactions_path %>">
