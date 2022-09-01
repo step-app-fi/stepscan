@@ -20,7 +20,7 @@ function getTxChartColor () {
   if (localStorage.getItem('current-color-mode') === 'dark') {
     return sassVariables.dashboardLineColorTransactionsDarkTheme
   } else {
-    return sassVariables.dashboardLineColorTransactions
+    return sassVariables.dashboardBannerChartAxisFontColor
   }
 }
 
@@ -248,7 +248,8 @@ class MarketHistoryChart {
       fill: false,
       pointRadius: 0,
       backgroundColor: getTxChartColor(),
-      borderColor: getTxChartColor()
+      borderColor: 'rgba(0, 51, 231, 1)',
+      tension:0.4
       // lineTension: 0
     }
 
