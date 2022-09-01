@@ -2,12 +2,12 @@ $tile-type-block-color: $primary !default;
 $tile-type-uncle-color: $cyan !default;
 $tile-type-reorg-color: $purple !default;
 $tile-type-emission-reward-color: $lilac !default;
-$tile-type-transaction-color: $blue !default;
-$tile-type-contract-call-color: $green !default;
-$tile-type-contract-creation-color: $dark-purple !default;
-$tile-type-token-transfer-color: $orange !default;
-$tile-type-unique-token-color: $orange !default;
-$tile-type-unique-token-image-color: $orange !default;
+$tile-type-transaction-color: #EBF3FE !default;
+$tile-type-contract-call-color: rgba(27, 162, 122, 0.24) !default;
+$tile-type-contract-creation-color: rgba(146, 61, 195, 0.24) !default;
+$tile-type-token-transfer-color: rgba(249, 213, 73, 0.24) !default;
+$tile-type-unique-token-color: rgba(239, 154, 96, 0.24) !default;
+$tile-type-unique-token-image-color: rgba(239, 154, 96, 0.24) !default;
 $tile-type-internal-transaction-color: $teal !default;
 $tile-type-api-documentation-color: $primary !default;
 $tile-type-progress-bar-color: $primary !default;
@@ -19,7 +19,6 @@ $tile-body-a-color: #5959d8 !default;
 
 @mixin generate-tile-block($prefix, $color, $label-color: false) {
   &#{ $prefix } {
-
     .tile-transaction-type-block {
       a {
         @if ($label-color) {
@@ -31,11 +30,25 @@ $tile-body-a-color: #5959d8 !default;
     }
 
     .tile-label {
-      @if ($label-color) {
-        color: $label-color;
-      } @else {
-        color: $color;
-      }
+      color: black;
+      text-transform: uppercase;
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.03em;
+    }
+
+    .tile-label-shadow {
+      color: black;
+      text-transform: uppercase;
+      font-family: 'Roboto Mono', monospace;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.03em;
+      opacity: 0.4;
+      margin-left: 16px;
     }
 
     .tile-status-label {
@@ -43,16 +56,45 @@ $tile-body-a-color: #5959d8 !default;
     }
 
     .tile-transaction-type-block {
-      background-color: rgba($color, 0.1);
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
-      color: $color;
+      color: black;
     }
   }
 }
 
 /*********************************************************************/
+
+.tile-type-transaction {
+  background-color: #EBF3FE;
+}
+
+.tile-type-contract-call{
+  background-color: rgba(27, 162, 122, 0.24);
+}
+
+.tile-type-contract-creation {
+  background-color: rgba(146, 61, 195, 0.24);
+}
+
+.tile-type-token-transfer {
+  background-color: rgba(249, 213, 73, 0.24);
+}
+
+.tile-type-unique-token {
+  background-color: rgba(249, 213, 73, 0.24);
+}
+
+.tx-link {
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 8px;
+}
 
 .tile-label {
   font-size: 12px;
@@ -181,7 +223,7 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile {
   span[data-address-hash] {
-    color: $tile-body-a-color;
+    color: black;
   }
 
   a[data-test=token_link] {
@@ -196,6 +238,11 @@ $tile-body-a-color: #5959d8 !default;
           text-decoration: underline;
         }
       }
+    }
+    .row_block {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 59px;
     }
   }
 
@@ -370,6 +417,34 @@ $tile-body-a-color: #5959d8 !default;
         margin-left: -6px;
         margin-right: -6px;
       }
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}
+
+.row_span {
+  display: flex;
+  gap: 22;
+
+  .alert-info {
+    background-color: #0033E7;
+    border-radius: 96px;
+    color: white;
+    padding: 8px 12px;
+    margin-left: 22px;
+
+    .alert-link {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: white;
     }
   }
 }

@@ -147,7 +147,7 @@ $dashboard-line-color-transactions-dark-theme: $secondary;
   .tile a:hover,
   .tile span[data-address-hash],
   .tile a[data-test=token_link] {
-      color: $labels-dark !important;
+      color: black;
   }
 
   a {
