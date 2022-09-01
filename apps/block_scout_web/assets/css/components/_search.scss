@@ -33,11 +33,9 @@
     width: 100% !important;
     padding: 0 !important;
     border: none !important;
-    border-radius: 0 !important;
-    background-color: #f5f6fa !important;
-    @media screen and (max-width: 992px) {
-        height: auto !important;
-    }
+    border-radius: 8px !important;
+    background-color: white !important;
+    height:auto !important;
 }
 
 .main-search-autocomplete, .main-search-autocomplete-mobile {

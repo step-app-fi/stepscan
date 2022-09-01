@@ -1,5 +1,4 @@
 <div class='dashboard-banner-container' data-page="chain-details">
-  <div class="container">
     <div class="dashboard-banner">
       <!-- Graph and legend -->
       <div class="dashboard-banner-network-graph">
@@ -65,10 +64,10 @@
             <% transaction_chart_config = @chart_config.transactions%>
             <%= if Enum.member?(transaction_chart_config, :transactions_per_day) do %>
             <div class="dashboard-banner-chart-legend-item tx-per-day">
-                <span class="dashboard-banner-chart-legend-label">
+                <div class="dashboard-banner-chart-legend-label">
                     <%= gettext "Daily Transactions" %>
-                </span>
-                <span class="dashboard-banner-chart-legend-value" data-selector="tx_per_day">
+                </div>
+                <div class="dashboard-banner-chart-legend-value" data-selector="tx_per_day">
                     <% num_of_transactions = BlockScoutWeb.Cldr.Number.to_string!(Enum.at(@transaction_stats, 0).number_of_transactions, format: "#,###") %>
                     <%= num_of_transactions %>
                     <% gas_used = Enum.at(@transaction_stats, 0).gas_used %>
@@ -82,7 +81,7 @@
                         <i style="color: #ffffff;" class="fa fa-info-circle ml-1"></i>
                       </span>
                     <% end %>
-                </span>
+                </div>
             </div>
             <% end %>
           <% end %>
@@ -97,7 +96,7 @@
             <% average_block_time -> %>
               <div class="dashboard-banner-network-stats-item dashboard-banner-network-stats-item-1">
                 <span class="dashboard-banner-network-stats-label">
-                  <%= gettext "Average block time" %>
+                  <%= gettext "Avg block time (sec.)" %>
                 </span>
                 <span class="dashboard-banner-network-stats-value" data-selector="average-block-time">
                   <%= Timex.format_duration(average_block_time, Explorer.Counters.AverageBlockTimeDurationFormat) %>
@@ -143,7 +142,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 <section class="container">
