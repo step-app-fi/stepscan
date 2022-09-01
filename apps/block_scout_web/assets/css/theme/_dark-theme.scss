@@ -223,10 +223,11 @@ $dark-stakes-banned-background: #3e314c;
 	.cube-animation-title {
 		color: $labels-dark;
 	}
+	.tile .tile-body span,
 	.tile .tile-body a,
 	.tile a:hover,
 	.tile span[data-address-hash],
-	.tile a[data-test=token_link] { color: $dark-primary; }
+	.tile a[data-test=token_link] { color: white; }
 	.fade-up-blocks-chain .tile-type-block-animation .tile-type-line-up {
 		background-color: $dark-primary;
 	}
@@ -247,6 +248,12 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.tile .tile-title-lg:not([data-balance-change-sign]) {
 		color: $dark-primary;
+	}
+	.tile-label {
+		color: white;
+	}
+	.tile-label-shadow {
+		color: white;
 	}
 
 	// btns
