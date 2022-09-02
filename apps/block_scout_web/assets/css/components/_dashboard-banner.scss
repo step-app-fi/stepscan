@@ -122,7 +122,6 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     @media (max-width: 599px) {
       padding-top: 0;
       padding-bottom: 0;
-      flex-direction: column;
     }
 
     &.price-per-day {
@@ -132,6 +131,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     }
 
     &.gas-price-oracle {
+      margin-left:10px;
       &::before {
         background-color: $dashboard-line-color-price;
       }
@@ -154,9 +154,15 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     color: $dashboard-stats-item-label-color;
     display: block;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin: 0 0 5px;
+    width: 140px;
+
+
+    @media (max-width: 393px) {
+      width: 120px;
+    }
 
     @media (max-width: 374px) {
       position: relative;
@@ -182,6 +188,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 
   .dashboard-banner-chart-legend-value-container {
     white-space: nowrap;
+    margin-top: -2.6px;
   }
 
   .gas-price-icon {
@@ -257,10 +264,14 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     grid-template-columns: 1fr 1fr;
   }
 
+  @media (max-width: 490px) {
+   grid-template-columns: 1fr;
+  }
+
   @include stats-item($dashboard-stats-item-border-color, $dashboard-stats-item-label-color, $dashboard-stats-item-value-color);
 
   .dashboard-banner-network-stats-item {
-    @media (max-width: 374px) {
+    @media (max-width: 490px) {
       padding-left: calc(0.6rem + 4px);
       padding-right: 0.5rem;
     }
