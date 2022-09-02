@@ -124,6 +124,10 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
       padding-bottom: 0;
     }
 
+    @media (max-width: 430px) {
+      flex-direction: column;
+    }
+
     &.price-per-day {
       &::before {
         background-color: $dashboard-line-color-price;
@@ -158,6 +162,14 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     line-height: 1.2;
     margin: 0 0 5px;
     width: 140px;
+
+    &.gas-label {
+      width: 115px;
+
+       @media (max-width: 393px) {
+        width: 84px;
+    }
+    }
 
 
     @media (max-width: 393px) {
