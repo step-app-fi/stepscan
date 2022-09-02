@@ -1,5 +1,5 @@
 <div class="dashboard-banner-chart-legend-item gas-price-oracle">
-    <span class="dashboard-banner-chart-legend-label">
+    <span class="dashboard-banner-chart-legend-label gas-label">
     <%= gettext "GAS TRACKER:" %>
     </span>
     <div class="dashboard-banner-chart-legend-value-container">
