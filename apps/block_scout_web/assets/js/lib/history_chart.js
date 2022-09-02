@@ -262,11 +262,10 @@ class MarketHistoryChart {
 
     this.availableSupply = availableSupply
 
-    const txChartTitle = 'Daily transactions'
     const marketChartTitle = 'Daily price and market cap'
     let chartTitle = ''
     if (Object.keys(dataConfig).join() === 'transactions') {
-      chartTitle = txChartTitle
+      chartTitle = ''
     } else if (Object.keys(dataConfig).join() === 'market') {
       chartTitle = marketChartTitle
     }
