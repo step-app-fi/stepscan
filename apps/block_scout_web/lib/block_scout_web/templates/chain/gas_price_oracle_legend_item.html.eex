@@ -1,6 +1,6 @@
 <div class="dashboard-banner-chart-legend-item gas-price-oracle">
     <span class="dashboard-banner-chart-legend-label">
-    <%= gettext "Gas tracker" %>
+    <%= gettext "GAS TRACKER:" %>
     </span>
     <div class="dashboard-banner-chart-legend-value-container">
         <% gas_prices_from_oracle = gas_prices() %>
@@ -23,7 +23,7 @@
                 </div>
                 "
                 >
-                <span style="display: inline-block; height: 20px; width: 12px;" class="fontawesome-icon info-circle ml-1"></span>
+                <span style="display: inline-block; background: black; margin-top:1px; height: 20px; width: 12px;" class="fontawesome-icon info-circle ml-1"></span>
                 </span>
             </div>
             </div>
