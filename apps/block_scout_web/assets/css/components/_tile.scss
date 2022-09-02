@@ -98,7 +98,7 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile-label {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   margin: 0 0 2px;
   text-align: center;
@@ -446,6 +446,31 @@ $tile-body-a-color: #5959d8 !default;
       text-transform: uppercase;
       color: white;
     }
+  }
+}
+
+.alert-warning {
+  background-color: rgba(255, 92, 0, 1);
+  color: white;
+  padding: 24px;
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  span {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: white;
+    text-align: left;
   }
 }
 
