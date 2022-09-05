@@ -208,7 +208,7 @@
   <div class="card card-chain-transactions">
     <div class="card-body">
       <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right") %>
-      <div class="row_span">
+      <div class="row_span_title">
         <div>
           <h2 class="card-title lg-card-title"><%= gettext "Transactions" %></h2>
         </div>
