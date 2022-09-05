@@ -120,7 +120,7 @@ export function placeHolderBlock (blockNumber) {
         </span>
         <div>
           <span class="tile-title pr-0 pl-0">${blockNumber}</span>
-          <div class="tile-transactions">${window.localized['Block Processing']}</div>
+          <div class="tile-transactions-processing">${window.localized['Block Processing']}</div>
         </div>
       </div>
     </div>
