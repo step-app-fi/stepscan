@@ -187,21 +187,21 @@ $dashboard-line-color-transactions-dark-theme: $secondary;
   }
 
   .btn-copy-icon, .btn-qr-icon, .btn-address-card-icon {
-		border-color: $labels-dark !important;
+		border-color: black !important;
 		path {
-			fill: $labels-dark !important;
+			fill: black !important;
 		}
 		&:hover {
-			background-color: $labels-dark !important;
+			background-color: black !important;
 			path {
-				fill: $body-dark !important;
+				fill: black !important;
 			}
 		}
     &.btn-copy-icon-small {
       &:hover {
         background-color: transparent !important;
         path {
-          fill: $labels-dark !important;
+          fill: black !important;
         }
       }
     }
@@ -274,5 +274,11 @@ $dashboard-line-color-transactions-dark-theme: $secondary;
 	}
   .footer-list ul li::before {
     background-color: $secondary !important;
+  }
+}
+
+.indent {
+  @media (min-width: 992px) {
+    padding-left: 40px;
   }
 }
