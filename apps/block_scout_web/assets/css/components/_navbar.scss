@@ -19,7 +19,7 @@ $navbar-logo-width: 100% !default;
   z-index: 100;
   flex-wrap: nowrap;
   box-shadow: none;
-  padding-top: 18px;
+  padding: 18px 24px 24px;
 
   .nav-item {
     font-size: 14px;
@@ -28,7 +28,7 @@ $navbar-logo-width: 100% !default;
   .navbar-nav {
     .nav-link {
       outline: none;
-      align-items: center;
+      align-items: flex-start;
       color: $header-links-color;
       display: flex;
       font-size: 12px;
@@ -70,9 +70,11 @@ $navbar-logo-width: 100% !default;
   }
 
   .container-fluid{
-  @media (max-width: 991.98px){
-    justify-content: unset;
-  }
+    padding-left: 0px;
+    padding-right: 0px;
+    @media (max-width: 991.98px) {
+      justify-content: unset;
+    }
 }
 
   .navbar-toggler {
@@ -171,10 +173,6 @@ $navbar-logo-width: 100% !default;
       @include media-breakpoint-down(md) {
         display: none;
       }
-    }
-
-    * {
-      fill: $header-textfield-magnifier-color;
     }
   }
   .input-group-text {
