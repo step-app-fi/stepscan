@@ -162,6 +162,13 @@ $stakes-link-color: $primary !default;
     float: left;
     padding-right: 30px;
   }
+
+  .address_hash_link, .text-truncate {
+    a, span {
+      color:black
+    }
+  }
+
 }
 
 .stakes-cell {
