@@ -447,6 +447,11 @@ $tile-body-a-color: #5959d8 !default;
         margin-left: -6px;
         margin-right: -6px;
       }
+      .indent {
+        @media (min-width: 992px) {
+          padding-left: 40px;
+        }
+      }
     }
     .column {
       display: flex;
@@ -784,5 +789,20 @@ $cube-quantity: 5;
     display: inline-block;
     word-break: break-all;
     line-height: 20px;
+  }
+}
+
+.alert-info {
+  background-color: #0033E7;
+  border-radius: 96px;
+  color: white;
+  display: inline-block;
+
+  a {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: white;
   }
 }

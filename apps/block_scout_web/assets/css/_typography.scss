@@ -1,4 +1,4 @@
-$common-link-color: $primary !default;
+$common-link-color: black !default;
 $blue: #4b89fb !default;
 $success: #34c0ad !default;
 
@@ -48,7 +48,7 @@ p {
 }
 
 a {
-  color: $common-link-color;
+  color: black;
   text-decoration: none;
 
   &:hover,

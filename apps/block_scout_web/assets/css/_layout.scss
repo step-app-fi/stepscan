@@ -6,6 +6,7 @@
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.03em;
   
   main {
     flex-grow: 1;
@@ -22,4 +23,10 @@
 
 .logs-hash {
   line-height: 24px !important;
+}
+
+.indent {
+  @media (min-width: 992px) {
+    padding-left: 40px;
+  }
 }
