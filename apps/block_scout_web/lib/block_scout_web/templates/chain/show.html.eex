@@ -16,7 +16,7 @@
                         <% end %>
                   <% end %>}'
                   data-history_chart_config = '<%= @chart_config_json %>'
-                  width="350" height="152">
+                  width="450" height="152">
           </canvas>
         </div>
         <!-- Legend -->

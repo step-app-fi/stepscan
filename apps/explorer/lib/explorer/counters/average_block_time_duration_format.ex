@@ -74,7 +74,7 @@ defmodule Explorer.Counters.AverageBlockTimeDurationFormat do
   def lformat(_, _locale), do: {:error, :invalid_duration}
 
   defp do_format(0, locale) do
-    Translator.translate_plural(locale, "units", "%{count}, millisecond", "%{count} milliseconds", 0)
+    Translator.translate_plural(locale, "units", "%{count}, sec", "%{count} msec", 0)
   end
 
   for {unit, name} <- @unit_term_mapping do

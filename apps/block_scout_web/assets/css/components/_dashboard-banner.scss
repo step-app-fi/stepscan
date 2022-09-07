@@ -26,7 +26,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   overflow: hidden;
   padding: 0;
   position: relative;
-  height: 410px;
+  height: 350px;
   background-color: $dashboard-banner-background !important;
   background-image: none !important;
   box-shadow: none;
@@ -44,13 +44,21 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   position: relative;
   z-index: 9;
   height: 100% !important;
+  gap: 0;
 
   @include media-breakpoint-between(lg, xl) {
     height: 249px;
+    gap: 70px;
   }
 
   @include media-breakpoint-down(sm) {
     flex-direction: column;
+    gap: 0;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -96,16 +104,15 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 
 .dashboard-banner-chart-legend {
   display: grid;
-  grid-template-columns: 0.6fr 0.9fr 0.9fr 0.9fr;
+  grid-template-columns: 0.8fr 1.1fr 0.9fr 0.9fr;
   padding-bottom: 12px;
-  padding-left:20px;
+  padding-left:24px;
 
   @include media-breakpoint-down(sm) {
     grid-template-columns: 1fr 1fr;
   }
 
   .dashboard-banner-chart-legend-item {
-    padding: 3px 12px;
     position: relative;
     display: flex;
     gap: 10px;
@@ -135,7 +142,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     }
 
     &.gas-price-oracle {
-      margin-left:10px;
+      margin-left: 22px;
       &::before {
         background-color: $dashboard-line-color-price;
       }
@@ -159,12 +166,12 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     display: block;
     font-size: 12px;
     font-weight: 500;
-    line-height: 1.2;
-    margin: 0 0 5px;
-    width: 140px;
+    line-height: 100%;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
     &.gas-label {
-      width: 115px;
 
        @media (max-width: 393px) {
         width: 84px;
@@ -191,7 +198,11 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     display: block;
     font-size: 12px;
     font-weight: normal;
-    line-height: 1.2;
+    line-height: 100%;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: 500;
 
     &.inline {
       display: inline-block;
@@ -200,7 +211,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 
   .dashboard-banner-chart-legend-value-container {
     white-space: nowrap;
-    margin-top: -2.6px;
+    margin-top: -4px;
   }
 
   .gas-price-icon {
@@ -215,6 +226,8 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 .dashboard-banner-network-stats-label {
   font-weight: 500;
   font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   opacity: 0.4;
   color: black !important
@@ -223,7 +236,10 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 .dashboard-banner-network-stats-value {
   font-weight: 500 !important;
   font-size: 32px !important;
-  color: black !important
+  line-height: 100%;
+  color: black !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .dashboard-banner-network-plain-container {
@@ -231,12 +247,10 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   border-top-left-radius: 10px;
   height: $dashboard-banner-network-plain-container-height;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 30px 0 30px 25px;
-  max-width: 550px;
+  padding: 80px 0 0;
+  max-width: 340px;
   position: relative;
-  height: 100%;
 
   @include media-breakpoint-down(lg) {
     width: 550px;
@@ -267,7 +281,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   }
 
   @include media-breakpoint-down(md) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     row-gap: 20px;
   }
 
@@ -283,6 +297,8 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   @include stats-item($dashboard-stats-item-border-color, $dashboard-stats-item-label-color, $dashboard-stats-item-value-color);
 
   .dashboard-banner-network-stats-item {
+    padding-left: 0;
+    padding-right: 0;
     @media (max-width: 490px) {
       padding-left: calc(0.6rem + 4px);
       padding-right: 0.5rem;
