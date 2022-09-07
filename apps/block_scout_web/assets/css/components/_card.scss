@@ -1,9 +1,9 @@
 $card-background-color: #fff !default;
-$card-tab-active: $primary !default;
+$card-tab-active: black !default;
 $card-default-border-radius: 10px !default;
 $card-horizontal-padding: 0px;
 $card-vertical-padding: 30px;
-$card-background-1: $primary !default;
+$card-background-1: black !default;
 $card-background-1-text-color: #fff !default;
 $card-tab-icon-color: #20b760 !default;
 $card-tab-icon-color-active: #fff !default;
@@ -197,6 +197,7 @@ $card-tab-icon-color-active: #fff !default;
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
+  margin-bottom: 30px;
 
   @include media-breakpoint-down(md) {
     flex-direction: column;
@@ -215,10 +216,11 @@ $card-tab-icon-color-active: #fff !default;
   padding: 0 25px;
   text-align: center;
   transition: $transition-cont;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: rgba($card-tab-active, .15);
-    color: $card-tab-active;
+    background-color: rgba(black, .15);
+    color: black;
     text-decoration: none;
   }
 
@@ -233,7 +235,7 @@ $card-tab-icon-color-active: #fff !default;
   }
 
   &.active {
-    background-color: $card-tab-active;
+    background-color: black;
     color: #fff;
     cursor: default;
     text-decoration: none;
@@ -328,4 +330,8 @@ $card-tab-icon-color-active: #fff !default;
 
 .function-output {
   margin-left: -1rem;
+}
+
+.transaction-details-address {
+  text-transform: lowercase;
 }
