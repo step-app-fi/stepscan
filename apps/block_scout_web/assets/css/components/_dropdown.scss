@@ -100,8 +100,19 @@ $dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
 }
 
 .dropdown-toggle::after {
-  margin-left: 0.71em;
+  margin-left: 12px;
+  margin-top: 3px;
   font-size: 12px !important;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid black;
+  border-right: 1px solid transparent;
+  border-top: 1px solid black;
+  content: "";
+  display: inline-block;
+  height: 7px;
+  margin-left: 12px;
+  width: 7px;
+  transform: rotate(224deg);
 }
 
 .token-balance-dropdown {

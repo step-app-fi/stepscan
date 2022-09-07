@@ -7,13 +7,21 @@ import { DateTime } from 'luxon'
 import { formatUsdValue } from '../lib/currency'
 import sassVariables from '../../css/export-vars-to-js.module.scss'
 
-Chart.defaults.font.family = 'Nunito, "Helvetica Neue", Arial, sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+Chart.defaults.font.family = '"Roboto Mono", monospace, Nunito, "Helvetica Neue", Arial, sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 Chart.register(LineController, LineElement, PointElement, LinearScale, TimeScale, Title, Tooltip)
 
 const grid = {
   display: false,
   drawBorder: false,
   drawOnChartArea: false
+}
+
+const gridX = {
+  display: true,
+  color: "rgba(0, 0, 0, 0.2)",
+  borderDash: [1, 1],
+  drawBorder: true,
+  drawOnChartArea: true
 }
 
 function getTxChartColor () {
@@ -42,7 +50,7 @@ function getMarketCapChartColor () {
 
 function xAxe (fontColor) {
   return {
-    grid,
+    grid: grid,
     type: 'time',
     time: {
       unit: 'day',
@@ -50,14 +58,19 @@ function xAxe (fontColor) {
       stepSize: 14
     },
     ticks: {
-      color: fontColor
+      color: fontColor,
+      font: {
+        family: '"Roboto Mono", monospace',
+        size: 12,
+        weight: '500',
+        lineHeight: 1
+      }
     }
   }
 }
 
 const padding = {
-  left: 20,
-  right: 20
+  left: 25,
 }
 
 const legend = {
@@ -86,7 +99,7 @@ const config = {
       x: xAxe(sassVariables.dashboardBannerChartAxisFontColor),
       price: {
         position: 'left',
-        grid,
+        grid: gridX,
         ticks: {
           beginAtZero: true,
           callback: (value, _index, _values) => `$${numeral(value).format('0,0.00')}`,
@@ -96,7 +109,7 @@ const config = {
       },
       marketCap: {
         position: 'right',
-        grid,
+        grid: gridX,
         ticks: {
           callback: (_value, _index, _values) => '',
           maxTicksLimit: 6,
@@ -106,12 +119,18 @@ const config = {
       },
       numTransactions: {
         position: 'right',
-        grid,
+        grid: gridX,
         ticks: {
           beginAtZero: true,
           callback: (value, _index, _values) => formatValue(value),
           maxTicksLimit: 4,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          color: sassVariables.dashboardBannerChartAxisFontColor,
+          font: {
+            family: '"Roboto Mono", monospace',
+            size: 12,
+            weight: '500',
+            lineHeight: 1
+          }
         }
       }
     },
