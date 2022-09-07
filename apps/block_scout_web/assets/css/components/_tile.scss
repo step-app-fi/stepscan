@@ -10,7 +10,7 @@ $tile-type-unique-token-color: rgba(239, 154, 96, 0.24) !default;
 $tile-type-unique-token-image-color: rgba(239, 154, 96, 0.24) !default;
 $tile-type-internal-transaction-color: $teal !default;
 $tile-type-api-documentation-color: $primary !default;
-$tile-type-progress-bar-color: $primary !default;
+$tile-type-progress-bar-color: black;
 $tile-status-error-reason: #ff7986 !default;
 $tile-status-awaiting-internal-transactions: $warning !default;
 $tile-padding: 1rem;
@@ -24,7 +24,7 @@ $tile-body-a-color: #5959d8 !default;
         @if ($label-color) {
           color: $label-color;
         } @else {
-          color: $color;
+          color: black;
         }
       }
     }
