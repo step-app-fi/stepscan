@@ -3,7 +3,7 @@
     <div class="api-doc-list-item-description">
       <h3 class="api-doc-list-item-title"><%= @action %></h3>
       <p class="api-doc-list-item-contents"><%= raw @info.notes %></p>
-      <span class="api-doc-list-item-query api-text-monospace api-text-monospace-background btn" 
+      <span class="api-doc-list-item-query api-text-monospace api-text-monospace-background btn text-white" 
         data-clipboard-text="curl -X POST --data '{&quot;id&quot;:0,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;: &quot;<%= @action %>&quot;,&quot;params&quot;: []}'"
       >
         curl -X POST --data '{"id":0,"jsonrpc":"2.0","method": "<%= @action %>", "params": []}'
@@ -39,7 +39,7 @@
     <h3 class="card-title margin-bottom-md">
       <%= gettext "Parameters" %>
       <button
-        class="btn-full-primary float-right"
+        class="btn-full-primary float-right bg-dark"
         data-action="<%= @action %>"
         data-module="eth"
         data-selector='<%= "eth-#{@action}-btn-try-api" %>'

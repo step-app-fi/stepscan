@@ -31,10 +31,10 @@
 
 .api-doc-tab {
   padding-bottom: 5px;
-  color: $primary !important;
+  color: black !important;
   background-color: transparent !important;
 }
 
 .api-doc-tab.active {
-  border-bottom: 1px solid $primary;
+  border-bottom: 1px solid black;
 }
