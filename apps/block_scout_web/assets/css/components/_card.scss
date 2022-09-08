@@ -251,14 +251,16 @@ $card-tab-icon-color-active: #fff !default;
 
       &::after {
         border-bottom: 1px solid transparent;
-        border-left: 1px solid black;
+        border-left: 1px solid white;
         border-right: 1px solid transparent;
-        border-top: 1px solid black;
+        border-top: 1px solid white;
         content: "";
         display: inline-block;
         height: 7px;
         margin-left: 12px;
         width: 7px;
+        transform: rotate(226deg);
+        margin-top: -5px;
       }
 
       &.noCaret::after {
