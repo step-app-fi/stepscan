@@ -84,8 +84,14 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   display: flex;
   justify-content: space-between;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     flex-direction: column;
+  }
+}
+
+.eth-rpc-btn {
+  &:hover {
+    cursor:pointer
   }
 }
 
@@ -95,6 +101,7 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   font-weight: 400;
   line-height: 1.2;
   margin: 0 0 15px;
+  max-width: 725px;
 }
 
 .api-doc-list-item-query {
