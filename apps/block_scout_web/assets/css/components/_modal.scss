@@ -55,16 +55,18 @@
   position: relative;
   .btn-primary {
     box-shadow: none !important;
-    background-color: $btn-line-color;
-    border: 1px solid $btn-line-color;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
     &:hover {
-      background-color: $btn-line-color;
-      border-color: $btn-line-color;
+      background-color: black;
+      border-color: black;
+      color: white;
     }
     &:focus,
     &:active {
-      background-color: darken($btn-line-color, 10%) !important;
-      border-color: darken($btn-line-color, 10%) !important;
+      background-color: darken(black, 10%) !important;
+      border-color: darken(black, 10%) !important;
     }
   }
 }
