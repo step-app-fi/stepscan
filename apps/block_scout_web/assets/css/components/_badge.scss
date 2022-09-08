@@ -2,8 +2,8 @@ $badge-success-color: #15bba6 !default;
 $badge-success-background-color: rgba($badge-success-color, 0.1) !default;
 $badge-danger-color: #ed9966 !default;
 $badge-danger-background-color: rgba($badge-danger-color, 0.1) !default;
-$badge-neutral-color: $secondary !default;
-$badge-neutral-background-color: rgba($secondary, .1) !default;
+$badge-neutral-color: black ;
+$badge-neutral-background-color: rgba(black, 0.1);
 
 .badge {
   color: $white;
