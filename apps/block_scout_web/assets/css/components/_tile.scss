@@ -797,6 +797,7 @@ $cube-quantity: 5;
   border-radius: 96px;
   color: white;
   display: inline-block;
+  text-transform: uppercase;
 
   a {
     font-family: 'Roboto Mono', monospace;
@@ -804,5 +805,8 @@ $cube-quantity: 5;
     line-height: 100%;
     letter-spacing: 0.03em;
     color: white;
+  }
+  @media (max-width: 490px) {
+    text-align: center;
   }
 }

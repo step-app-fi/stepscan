@@ -3,7 +3,15 @@ $alert-danger-border-color: #fff3f7 !default;
 $alert-danger-color: #ff7986 !default;
 
 .alert-danger {
-    background-color: $alert-danger-background-color;
-    border-color: $alert-danger-border-color;
-    color: $alert-danger-color;
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    
+    span {
+        background-color: #D44333;
+        color: white;
+        border-radius: 96px;
+    }
 }
