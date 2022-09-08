@@ -22,12 +22,15 @@
           <%= formatted_result(status) %>
         </span>
       </div>
-      <div class="row_span">
-        <span class="tile-label">
-          <%= @transaction |> block_number() |> BlockScoutWeb.RenderHelpers.render_partial() %>
-        </span>
-        <span class="tile-label-shadow" in-tile data-from-now="<%= block_timestamp(@transaction) %>"></span>
-        <%= if from_or_to_address?(@transaction, assigns[:current_address]) do %>
+      <div class="column align-items-flex-end">
+        <div class="row_span">
+          <span class="tile-label">
+            <%= @transaction |> block_number() |> BlockScoutWeb.RenderHelpers.render_partial() %>
+          </span>
+          <span class="tile-label-shadow" in-tile data-from-now="<%= block_timestamp(@transaction) %>"></span>
+        </div>
+        <div>
+          <%= if from_or_to_address?(@transaction, assigns[:current_address]) do %>
           <span class="mr-2 mr-md-0 order-0 order-md-3">
             <%= if @transaction.from_address_hash == assigns[:current_address].hash do %>
               <span data-test="transaction_type" class="badge badge-danger tile-badge">
@@ -39,7 +42,8 @@
               </span>
             <% end %>
           </span>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
     <!-- Content -->
