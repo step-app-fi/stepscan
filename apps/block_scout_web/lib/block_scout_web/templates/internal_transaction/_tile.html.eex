@@ -13,23 +13,27 @@
           <span class="tile-status-label ml-2 ml-md-0"><%= gettext "Error" %>: <%= error %></span>
         <% end %>
       </div>
-      <div class="row_span">
-        <span class="tile-label">
-          <%= link(
-            gettext("Block #%{number}", number: to_string(@internal_transaction.block_number)),
-            to: block_path(BlockScoutWeb.Endpoint, :show, @internal_transaction.block_number)
-          ) %>
-        </span>
-        <span class="tile-label-shadow" in-tile data-from-now="<%= @internal_transaction.transaction.block.timestamp %>"></span>
-        <%= if assigns[:current_address] do %>
-          <span class="mr-2 mr-md-0 order-0 order-md-3">
-            <%= if assigns[:current_address].hash == @internal_transaction.from_address_hash do %>
-              <span class="badge badge-danger tile-badge"><%= gettext "OUT" %></span>
-            <% else %>
-              <span class="badge badge-success tile-badge"><%= gettext "IN" %></span>
-            <% end %>
+      <div class="column align-items-flex-end">
+        <div class="row_span">
+          <span class="tile-label">
+            <%= link(
+              gettext("Block #%{number}", number: to_string(@internal_transaction.block_number)),
+              to: block_path(BlockScoutWeb.Endpoint, :show, @internal_transaction.block_number)
+            ) %>
           </span>
-        <% end %>
+           <span class="tile-label-shadow" in-tile data-from-now="<%= @internal_transaction.transaction.block.timestamp %>"></span>
+        </div>
+        <div>
+          <%= if assigns[:current_address] do %>
+            <span class="mr-2 mr-md-0 order-0 order-md-3">
+              <%= if assigns[:current_address].hash == @internal_transaction.from_address_hash do %>
+                <span class="badge badge-danger tile-badge"><%= gettext "OUT" %></span>
+              <% else %>
+                <span class="badge badge-success tile-badge"><%= gettext "IN" %></span>
+              <% end %>
+            </span>
+          <% end %>
+        </div>
       </div>
     </div>
     <!-- Content -->

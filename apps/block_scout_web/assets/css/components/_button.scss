@@ -14,14 +14,18 @@ $button-secondary-color: $secondary !default;
   white-space: nowrap;
 
   &-primary {
-    background-color: $button-primary-color;
-    border: 1px solid $button-primary-color;
-    color: #fff;
+    background-color: white;
+    border: 1px solid #f3f3f3;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 8px;
+    height: 40px;
 
     &:hover,
     &:focus {
-      background-color: darken($button-primary-color, 10%);
-      border-color: darken($button-primary-color, 10%);
+      background-color: black;
+      border-color: black;
       color: #fff;
       outline: none !important;
       text-decoration: none;
@@ -101,4 +105,13 @@ $button-secondary-color: $secondary !default;
   background-position: right;
   background-repeat: no-repeat;
   background-size: 30px;
+}
+
+.buttons-mobile {
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 }
