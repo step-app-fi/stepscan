@@ -270,12 +270,12 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.btn-copy-icon, .btn-qr-icon, .btn-address-card-icon .btn-contract-icon {
-		border-color: $dark-primary;
+		border-color: black;
 		path {
-			fill: $dark-primary;
+			fill: black;
 		}
 		&:hover {
-			background-color: $dark-primary;
+			background-color: black;
 			path {
 				fill: #fff;
 			}
