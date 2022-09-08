@@ -97,6 +97,7 @@ $tooltip-background-color: $btn-line-color !default;
 }
 
 .tooltip-gas-tracker {
+    color: white;
     .tooltip-inner {
         @media (min-width: 576px) {
             max-width: 150px !important;
@@ -110,11 +111,13 @@ $tooltip-background-color: $btn-line-color !default;
 
 .custom-tooltip {
     font-family: Nunito, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: white;
 }
 
 .custom-tooltip.header {
     font-size: 1.2em;
     margin-bottom: 10px;
+    color: white;
 }
 
 .custom-tooltip.total-transactions {
@@ -126,6 +129,7 @@ $tooltip-background-color: $btn-line-color !default;
 
 .custom-tooltip.description {
     width: 100%;
+    color: white;
     .left {
         text-align: left;
     }
