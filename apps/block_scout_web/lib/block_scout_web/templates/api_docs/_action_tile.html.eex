@@ -32,7 +32,7 @@
     <h3 class="card-title margin-bottom-md">
       <%= gettext "Parameters" %>
       <button
-        class="btn-full-primary float-right"
+        class="btn-full-primary float-right bg-dark"
         data-action="<%= @action.name %>"
         data-module="<%= @module_name %>"
         data-selector='<%= "#{@module_name}-#{@action.name}-btn-try-api" %>'
