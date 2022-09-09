@@ -26,7 +26,8 @@
 }
 
 .autoComplete_wrapper {
-    width: 100% !important;
+    width: 85%;
+    position: static;
 }
 
 .main-search-autocomplete {
@@ -67,4 +68,8 @@ ul[id^='autoComplete_list_'] {
 li[id^='autoComplete_result_'] {
     font-size: 12px !important;
     border-radius: 0 !important;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }

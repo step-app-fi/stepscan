@@ -1,5 +1,5 @@
 <!-- Search navbar -->
-<div class="search-form d-lg-flex d-inline-block <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
+<div class="search-form d-lg-flex d-inline-block <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>" style="position: relative;">
 	<div class="input-group" style="width: 100%;" title='<%= gettext("SEARCH") %>'>
 		<div class="form-control search-control me auto <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
 			<input

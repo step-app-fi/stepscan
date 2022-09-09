@@ -19,6 +19,9 @@ $navbar-logo-width: 100% !default;
   flex-wrap: nowrap;
   box-shadow: none;
   padding: 18px 24px 24px;
+  @include media-breakpoint-down(md) {
+    align-items: flex-start;
+  }
 
   .nav-item {
     font-size: 14px;
@@ -98,14 +101,8 @@ $navbar-logo-width: 100% !default;
       margin-top: -8px;
     }
 
-    @include media-breakpoint-down(md) {
-      position: absolute;
-      right:18px;
-      top:18px
-    }
-    
     @media (max-width: 400px) {
-      width: 40%;
+      width: 90%;
     }
   }
 
