@@ -48,7 +48,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 
   @include media-breakpoint-between(lg, xl) {
     height: 249px;
-    gap: 70px;
+    gap: 10px;
   }
 
   @include media-breakpoint-down(sm) {
@@ -248,8 +248,8 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   height: $dashboard-banner-network-plain-container-height;
   display: flex;
   justify-content: center;
-  padding: 80px 0 0;
-  max-width: 340px;
+  padding: 80px 10px 0;
+  max-width: 550px;
   position: relative;
 
   @include media-breakpoint-down(lg) {
