@@ -45,9 +45,14 @@ $dropdown-menu-item-hover-background: rgba(black, 0.1) !default;
   & {
     &.active,
     &:hover,
+    &:visited,
     &:focus {
       background-color: rgba(black, 0.1);
       color: #333;
+
+      div {
+        color: #333;
+      }
 
       .external-link-icon {
         path {
