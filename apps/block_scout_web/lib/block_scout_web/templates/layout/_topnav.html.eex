@@ -2,7 +2,11 @@
 <nav class="navbar navbar-dark navbar-expand-lg navbar-primary" data-selector="navbar" id="top-navbar">
   <div class="container-fluid navbar-container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<%= gettext("Toggle navigation") %>">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.864136 12.5H19.4976M0.864136 7H19.4976H0.864136ZM0.864136 1.5H19.4976H0.864136Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+      </span>
     </button>
     <%= link to: webapp_url(@conn), class: "navbar-brand", "data-test": "header_logo" do %>
       <%= if logo() do %>
