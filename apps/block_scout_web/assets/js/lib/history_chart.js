@@ -49,6 +49,9 @@ function getMarketCapChartColor () {
 }
 
 function xAxe (fontColor) {
+  if (localStorage.getItem('current-color-mode') === 'dark') {
+    fontColor = 'white'
+  }
   return {
     grid: grid,
     type: 'time',
@@ -124,7 +127,7 @@ const config = {
           beginAtZero: true,
           callback: (value, _index, _values) => formatValue(value),
           maxTicksLimit: 4,
-          color: sassVariables.dashboardBannerChartAxisFontColor,
+          color: localStorage.getItem('current-color-mode') === 'dark' ? 'white' : sassVariables.dashboardBannerChartAxisFontColor,
           font: {
             family: '"Roboto Mono", monospace',
             size: 12,
