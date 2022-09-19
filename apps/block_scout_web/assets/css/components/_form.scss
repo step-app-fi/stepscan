@@ -1,9 +1,8 @@
 $form-control-border-color: #e2e5ec !default;
-$form-control-border-color-active: $primary !default;
+$form-control-border-color-active: black;
 
 .form-control {
   border-color: $form-control-border-color;
-  border-radius: 0;
   font-size: 14px;
 
   &.border-rounded {
