@@ -2,7 +2,7 @@ $body-dark: #1c1d31; // body background
 $dark-bg: #22223a; // hero shade
 $dark-light-bg: #282945; // pills bg shade
 $dark-light: #313355; // tile light top share
-$labels-dark: #8a8dba; // header nav, labels
+$labels-dark: white; // header nav, labels
 $dark-stakes-banned-background: #3e314c;
 
 // Switcher
@@ -573,7 +573,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 		&:focus {
 			background-color: $dark-light;
-			border-color: $dark-primary;
+			border-color: white;
 			color: #fff;
 		}
 
@@ -604,17 +604,17 @@ $dark-stakes-banned-background: #3e314c;
 		border-color: $labels-dark;
 	}
 	.radio-big input[type="radio"]:checked + .radio-icon {
-		border-color: $dark-primary;
+		border-color: white;
 	}
 	.radio-big input[type="radio"]:checked + .radio-icon::before {
-		background: $dark-primary;
+		background: white;
 	}
 	.radio-big .radio-text {
 		color: #fff;
 	}
 
 	.check input[type="checkbox"]:checked + .check-icon::before {
-		background: $dark-primary;
+		background: white;
 	}
 
 	// Content loading placeholders
@@ -958,20 +958,20 @@ $dark-stakes-banned-background: #3e314c;
 
 	// primary buttons
 	.btn-full-primary, .button-primary {
-		background: $dark-primary;
-		border-color: $dark-primary;
-		color: #fff;
+		background: white;
+		border-color: white;
+		color: black;
 		&:hover {
-			background: darken($dark-primary, 6);
-			border-color: darken($dark-primary, 6);
-			color: #fff;
+			background: black;
+			border-color: black;
+			color: white;
 		}
 
 		&[disabled] {
 			&,
 			&:hover {
-			  background-color: $dark-primary;
-			  border-color: $dark-primary;
+			  background-color: grey;
+			  border-color: grey;
 			}
 		}
 	}

@@ -23,6 +23,13 @@ $new-smart-contract-center-column-margin-right: 30px;
   }
 }
 
+.new-smart-contract-form {
+  margin-left: 20px;
+  @media (max-width: 576px) {
+    margin-left: 0;
+  }
+}
+
 .smart-contract-title {
   color: #333;
   font-size: 18px;
@@ -31,6 +38,7 @@ $new-smart-contract-center-column-margin-right: 30px;
   margin: 0 0 70px 0;
   padding: 0;
   text-align: left;
+  text-transform: uppercase;
 
   @include media-breakpoint-down(md) {
     margin-bottom: 30px;
