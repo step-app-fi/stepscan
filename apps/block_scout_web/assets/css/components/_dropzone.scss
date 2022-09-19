@@ -256,6 +256,7 @@
 .dropzone-1 .dz-message {
 	text-align: center;
 	margin: 2em auto;
+	white-space: normal;
 }
 
 .dropzone-1 .dz-message .dz-button {
@@ -532,10 +533,10 @@
 
 // custom styles
 .dropzone-1 {
-	border-color: $primary !important;
+	border-color: black;
 	border-style: dashed !important;
 	align-items: center;
 	justify-content: center;
 	display: flex;
-	background: rgba($primary, 0.1) !important;
+	background: #e9ecef !important;
 }

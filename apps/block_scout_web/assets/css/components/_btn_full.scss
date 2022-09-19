@@ -1,6 +1,7 @@
-$btn-full-primary-bg: $primary !default;
+$btn-full-primary-bg: black;
 $btn-full-primary-color: #fff !default;
 
 .btn-full-primary {
+  text-transform: uppercase;
   @include btn-full($btn-full-primary-bg, $btn-full-primary-color);
 }
