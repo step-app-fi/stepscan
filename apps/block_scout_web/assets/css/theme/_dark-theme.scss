@@ -188,8 +188,8 @@ $alert-warning-background: #f3f3f3;
 	.card-tab {
 		background-color: transparent;
 		&:hover:not(.active) {
-			background-color: rgba($dark-primary, .15);
-			color: $labels-dark;
+			background-color: white;
+			color: black;
 		}
 		&.active {
 			background-color: $labels-dark;
@@ -274,7 +274,7 @@ $alert-warning-background: #f3f3f3;
 		background-color: $labels-dark;
 	}
 	.tile .tile-title-lg:not([data-balance-change-sign]) {
-		color: $dark-primary;
+		color: white;
 	}
 	.tile-label {
 		color: white;
@@ -299,12 +299,20 @@ $alert-warning-background: #f3f3f3;
 	.btn-copy-icon, .btn-qr-icon, .btn-address-card-icon .btn-contract-icon {
 		border-color: black;
 		path {
-			fill: black;
+			fill: white;
 		}
 		&:hover {
 			background-color: black;
 			path {
 				fill: #fff;
+			}
+		}
+	}
+
+	.btn-copy-icon {
+		&:hover {
+			path {
+				fill: white;
 			}
 		}
 	}
