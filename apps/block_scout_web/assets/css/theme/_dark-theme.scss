@@ -31,6 +31,9 @@ $alert-warning-background: #f3f3f3;
 			fill: $dark-primary;
 		}
 	}
+	@include media-breakpoint-down(sm) {
+		margin-left:-10px;
+	  }
 }
 
 	.dark-theme-applied {
