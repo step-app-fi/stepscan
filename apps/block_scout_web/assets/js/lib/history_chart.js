@@ -18,7 +18,7 @@ const grid = {
 
 const gridX = {
   display: true,
-  color: "rgba(0, 0, 0, 0.2)",
+  color: getLabelColor("rgba(0, 0, 0, 0.2)", 'rgba(255, 255, 255, 0.2)'),
   borderDash: [1, 1],
   drawBorder: true,
   drawOnChartArea: true
@@ -30,6 +30,10 @@ function getTxChartColor () {
   } else {
     return sassVariables.dashboardBannerChartAxisFontColor
   }
+}
+
+function getLabelColor (color, darkColor) {
+  return localStorage.getItem('current-color-mode') === 'dark' ? darkColor : color
 }
 
 function getPriceChartColor () {
@@ -127,7 +131,7 @@ const config = {
           beginAtZero: true,
           callback: (value, _index, _values) => formatValue(value),
           maxTicksLimit: 4,
-          color: localStorage.getItem('current-color-mode') === 'dark' ? 'white' : sassVariables.dashboardBannerChartAxisFontColor,
+          color: getLabelColor(sassVariables.dashboardBannerChartAxisFontColor, 'white'),
           font: {
             family: '"Roboto Mono", monospace',
             size: 12,
