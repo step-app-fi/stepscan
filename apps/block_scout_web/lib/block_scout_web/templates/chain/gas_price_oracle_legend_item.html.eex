@@ -22,6 +22,7 @@
                     <div class='custom-tooltip description left d-flex'><span><%= gettext "Fast" %></span><span class='custom-tooltip description right'><%= gas_prices_from_oracle["fast"] %> <%= gettext "Gwei" %></span></div>
                 </div>
                 "
+                class = "d-flex align-items-center"
                 >
                 <span style="display: inline-block; background: black; margin-top:1px; height: 15px; width: 15px;" class="fontawesome-icon info-circle ml-1"></span>
                 </span>
