@@ -36,9 +36,14 @@ $alert-warning-background: #f3f3f3;
 	  }
 }
 
-	.dark-theme-applied {
+.dark-theme-applied {
 		color: #fff;
 
+	.search-control {
+		&.focused-field {
+			border: 1px solid $alert-warning-background !important;
+		}
+	}
 	.alert-warning {
 		background-color: $alert-warning-background;
 		color:black;
@@ -53,16 +58,17 @@ $alert-warning-background: #f3f3f3;
 	  }
 
 	.fontawesome-icon{ 
-		.info-circle {
-			background: white;
-		}
-	
+		background-color: $alert-warning-background !important;	
 	} 
 
 	// navbar
 	.navbar.navbar-primary {
 		background-color: $dark-light-bg;
 		.input-group-text {
+			svg path {
+				stroke: $alert-warning-background
+			}
+
 			&.border {
 				background-color: $dark-light-bg;
 			}
@@ -555,7 +561,7 @@ $alert-warning-background: #f3f3f3;
 		}
 	}
 	.smart-contract-form-group-inner-wrapper .smart-contract-form-group-tooltip {
-		color: $labels-dark;
+		color: $body-dark !important;
 	}
 	.smart-contract-title {
 		color: #fff;
@@ -1037,31 +1043,34 @@ $alert-warning-background: #f3f3f3;
 	}
 
 	.tooltip-inversed-color {
+		*{
+			color:$body-dark !important
+		}
 		.tooltip-inner {
-			background-color: $btn-line-color !important;
-			color: #fff !important;
+			background-color: $alert-warning-background !important;
+			color: black !important;
 		}
 	}
 
 	.tooltip-inversed-color.bs-tooltip-top .arrow::before,
 	.tooltip-inversed-color.bs-tooltip-auto[x-placement^="top"] .arrow::before {
-		border-top-color: $btn-line-color !important;
+		border-top-color: $alert-warning-background !important;
 	}
 		
 	.tooltip-inversed-color.bs-tooltip-right .arrow::before,
 	.tooltip-inversed-color.bs-tooltip-auto[x-placement^="right"] .arrow::before {
-		border-right-color: $btn-line-color !important;
+		border-right-color: $alert-warning-background !important;
 	}
 		
 	.tooltip-inversed-color.bs-tooltip-bottom .arrow::before,
 	.tooltip-inversed-color.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-		border-bottom-color: $btn-line-color !important;
+		border-bottom-color: $alert-warning-background !important;
 	}
 		
 		
 	.tooltip-inversed-color.bs-tooltip-left .arrow::before,
 	.tooltip-inversed-color.bs-tooltip-auto[x-placement^="left"] .arrow::before {
-		border-left-color: $btn-line-color !important;
+		border-left-color: $alert-warning-background !important;
 	}
 
 	.stakes-top {
@@ -1088,17 +1097,19 @@ $alert-warning-background: #f3f3f3;
 		color: #fff !important;
 	}
 	ul[id^='autoComplete_list_'] {
-		background-color: $dark-light-bg !important;
+		background-color: $dark-light !important;
 	}
 	li[id^='autoComplete_result_'] {
 		background-color: $dark-light-bg !important;
 		color: #fff !important;
 
 		&:hover {
-			background-color: $dark-primary !important;
+			background-color: #f3f3f3 !important;
+			color: black;
 		}
 		&[aria-selected="true"] {
-			background-color: $dark-primary !important;
+			background-color: #f3f3f3 !important;
+			color: black;
 		}
 	}
 }
