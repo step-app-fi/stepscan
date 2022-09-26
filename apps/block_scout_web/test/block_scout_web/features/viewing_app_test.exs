@@ -52,7 +52,6 @@ defmodule BlockScoutWeb.ViewingAppTest do
 
   #     session
   #     |> AppPage.visit_page()
-  #     |> assert_has(AppPage.indexed_status("Indexing Tokens"))
   #   end
 
   #   test "updates blocks indexed percentage", %{session: session} do
@@ -129,7 +128,6 @@ defmodule BlockScoutWeb.ViewingAppTest do
 
   #     session
   #     |> AppPage.visit_page()
-  #     |> assert_has(AppPage.indexed_status("Indexing Tokens"))
 
   #     Repo.update_all(
   #       from(p in PendingBlockOperation, where: p.block_hash == ^block_hash),
