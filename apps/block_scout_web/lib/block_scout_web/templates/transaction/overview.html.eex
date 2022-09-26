@@ -32,7 +32,7 @@
     <div class="col-md-12">
       <!-- Transaction Details -->
       <div class="card js-ad-dependant-mb-3">
-        <div class="card-body">
+        <div class="card-body card-body-transaction-details">
           <%= cond do %>
             <% Enum.member?(circles_addresses_list, address_hash_str) -> %>
               <div class="custom-dapp-header-container">
