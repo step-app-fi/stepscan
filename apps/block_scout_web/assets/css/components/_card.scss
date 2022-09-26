@@ -165,6 +165,14 @@ $card-tab-icon-color-active: #fff !default;
   justify-content: space-between;
 }
 
+.card-body-transaction-details {
+  dd {
+    @include media-breakpoint-up(sm){
+      padding-left:30px
+    }
+  }
+}
+
 .card-server-response-body {
   max-height: 400px;
   overflow-y: auto;
