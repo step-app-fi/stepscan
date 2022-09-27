@@ -302,6 +302,12 @@ $alert-warning-background: #f3f3f3;
 		}
 	}
 
+	.btn-copy-icon-hash {
+		path {
+			fill: white;
+		}
+	}
+
 	.btn-copy-icon, .btn-qr-icon, .btn-address-card-icon .btn-contract-icon {
 		border-color: black;
 		path {
