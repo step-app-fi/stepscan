@@ -326,6 +326,16 @@ class MarketHistoryChart {
     this.numTransactions.data = getTxHistoryData(transactionHistory)
     this.chart.update()
   }
+  
+  switchChartTheme () {
+    const {scales} = config.options
+    scales.numTransactions.ticks.color = getLabelColor(sassVariables.dashboardBannerChartAxisFontColor, 'white')
+    scales.x = xAxe(sassVariables.dashboardBannerChartAxisFontColor)
+    scales.price.grid.color,
+    scales.marketCap.grid.color,
+    scales.numTransactions.grid.color = getLabelColor("rgba(0, 0, 0, 0.2)", 'rgba(255, 255, 255, 0.2)')
+    this.chart.update()
+  }
 }
 
 export function createMarketHistoryChart (el) {
