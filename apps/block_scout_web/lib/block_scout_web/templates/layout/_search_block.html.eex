@@ -1,0 +1,22 @@
+<!-- Search block -->
+<div class="search-form d-lg-flex d-inline-block <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>" style="position: relative;">
+	<div class="input-group" title='<%= gettext("SEARCH") %>'>
+		<div class="form-control search-control me auto <%= if assigns[:additional_classes] do @additional_classes |> Enum.join(" ") end %>">
+			<input
+				id="<%= @id %>"
+				class="main-search-autocomplete-search-box"
+				data-test="search_input"
+				data-chain-id="<%= System.get_env("CHAIN_ID") %>"
+				data-display-token-icons="<%= System.get_env("DISPLAY_TOKEN_ICONS") %>"
+				type="text"
+				tabindex="1"
+			>
+		</div>
+		<div class="input-group-append right">
+			<button class="input-group-text" id="search-icon">
+			<%= render BlockScoutWeb.IconsView, "_search_icon.html" %>
+			</button>
+		</div>
+	</div>
+	<button class="btn btn-outline-success my-2 my-sm-0 sr-only hidden" type="submit"><%= gettext "Search" %></button>
+</div>

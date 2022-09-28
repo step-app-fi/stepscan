@@ -145,6 +145,12 @@
   </div>
 </div>
 <section class="container">
+  <div class="card js-ad-dependant-mb-3">
+    <div class="search_box">
+      <h2 class="card-title">Search</h2>
+      <%= render BlockScoutWeb.LayoutView, "_search_block.html", conn: @conn, id: "main-search-autocomplete-search-box", additional_classes: ["mobile-search-hide"] %>
+    </div>
+  </div>
   <div class="card card-chain-blocks js-ad-dependant-mb-3">
     <div class="card-body">
       <%= link(gettext("View All Blocks"), to: blocks_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right") %>
