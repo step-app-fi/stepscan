@@ -23,6 +23,12 @@ $navbar-logo-width: 100% !default;
     align-items: flex-start;
   }
 
+  .navbar-container {
+    @include media-breakpoint-down(md) {
+      margin-top:6px;
+    }
+  }
+
   .nav-item {
     font-size: 14px;
   }
@@ -93,16 +99,17 @@ $navbar-logo-width: 100% !default;
   .search-form {
     display: flex;
     align-items: center;
-    height: 40px;
-    width: 200px;
+    height: 50px;
+    max-width: 1000px;
+    width: 100%;
 
     @include media-breakpoint-up(xl) {
       margin-bottom: -8px;
       margin-top: -8px;
     }
 
-    @media (max-width: 400px) {
-      width: 90%;
+    @media (max-width: 540px) {
+      width: 90% !important;
     }
   }
 
@@ -113,6 +120,9 @@ $navbar-logo-width: 100% !default;
   .input-group {
     height: 100%;
     position: relative;
+    input::placeholder {
+      color:black !important
+    }
   }
 
   .form-control {
