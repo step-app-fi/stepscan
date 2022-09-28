@@ -30,6 +30,18 @@
     position: static;
 }
 
+.autoComplete_wrapper > ul {
+    position: absolute;
+    right: 0;
+    left: auto;
+    max-width: 550px;
+    box-sizing: border-box;
+    max-width: 550px;
+    @media (max-width: 768px) {
+        max-width: 300px;
+    }
+}
+
 .main-search-autocomplete {
     width: 100% !important;
     padding: 0 !important;
