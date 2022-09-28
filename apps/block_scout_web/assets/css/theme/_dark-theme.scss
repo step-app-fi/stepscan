@@ -64,6 +64,9 @@ $alert-warning-background: #f3f3f3;
 	// navbar
 	.navbar.navbar-primary {
 		background-color: $dark-light-bg;
+		.input-group input::placeholder{	 
+				color:$labels-dark !important
+		}
 		.input-group-text {
 			svg path {
 				stroke: $alert-warning-background
@@ -607,7 +610,7 @@ $alert-warning-background: #f3f3f3;
 	// Form Controlls
 	.form-control {
 		background-color: $dark-light;
-		border-color: $dark-light;
+		border-color: $alert-warning-background;
 		color: #fff;
 		transition: border-color 0.15s ease-in-out;
 
@@ -1118,11 +1121,11 @@ $alert-warning-background: #f3f3f3;
 		color: #fff !important;
 
 		&:hover {
-			background-color: #f3f3f3 !important;
+			background-color: #313355 !important;
 			color: black;
 		}
 		&[aria-selected="true"] {
-			background-color: #f3f3f3 !important;
+			background-color: #313355 !important;
 			color: black;
 		}
 	}
