@@ -1008,7 +1008,7 @@ $alert-warning-background: #f3f3f3;
 
 	// primary buttons
 	.btn-full-primary, .button-primary {
-		background: white;
+		background: white !important;
 		border-color: white;
 		color: black;
 		&:hover {
