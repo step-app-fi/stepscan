@@ -50,7 +50,10 @@ function parseInput (input) {
 }
 
 function composeRequestUrl () {
-  const url = $('[data-endpoint-url]').attr('data-endpoint-url')
+  let url = $('[data-endpoint-url]').attr('data-endpoint-url')
+  if(url === ':///api/eth-rpc') {
+    url = url.split('').splice(4).join('')
+  }
   return url
 }
 
