@@ -26,7 +26,10 @@ function queryParameterFromInput (input) {
 }
 
 function composeRequestUrl (query) {
-  const url = $('[data-endpoint-url]').attr('data-endpoint-url')
+  let url = $('[data-endpoint-url]').attr('data-endpoint-url')
+  if (url === ':///api') {
+    url = url.split('').splice(4).join('')
+  }
   return `${url}${query}`
 }
 
