@@ -423,7 +423,7 @@
             <dt class="col-sm-3 col-lg-2 text-muted transaction-gas-used">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                 text: gettext("Actual gas amount used by the transaction.") %>
-              <%= gettext "Gas Used by Transaction" %>
+              <%= gettext "Gas Used by tx" %>
             </dt>
             <% gas_used_perc = gas_used_perc(@transaction) %>
             <dd class="col-sm-9 col-lg-10"> <%= gas_used(@transaction) %> <%= if gas_used_perc, do: "| #{gas_used_perc}%" %></dd>
