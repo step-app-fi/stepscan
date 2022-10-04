@@ -46,7 +46,7 @@
         </div>
       </span>
       <span class="address-link">
-        <span class="address-link-underline">
+        <span class="address-link-underline-span">
           <%= @internal_transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> (&(if is_list(&1), do: Keyword.put(&1, :ignore_implementation_name, true), else: &1)).() |> BlockScoutWeb.RenderHelpers.render_partial() %>
         </span>
         <span> → </span>
