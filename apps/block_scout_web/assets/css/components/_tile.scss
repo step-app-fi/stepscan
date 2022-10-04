@@ -90,10 +90,15 @@ $tile-body-a-color: #5959d8 !default;
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.03em;
-  text-decoration: underline;
   text-transform: lowercase;
   color: black;
   margin-bottom: 0;
+}
+
+.underline {
+  a {
+    text-decoration: underline;
+  }
 }
 
 .hash-copy-block {
@@ -115,6 +120,26 @@ $tile-body-a-color: #5959d8 !default;
   letter-spacing: 0.03em;
   color: black;
   margin-bottom: 8px;
+  .address-link-underline-span {
+     span {
+      span {
+        text-decoration: underline;
+      }
+     } 
+     a { 
+      span {
+        span {
+          text-decoration: underline;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
   .address-link-underline {
     text-decoration: underline;
   }
@@ -272,11 +297,6 @@ $tile-body-a-color: #5959d8 !default;
   .tile-body {
     a {
       color: black;
-      &:hover {
-        span {
-          text-decoration: underline;
-        }
-      }
     }
     .row_block {
       display: flex;

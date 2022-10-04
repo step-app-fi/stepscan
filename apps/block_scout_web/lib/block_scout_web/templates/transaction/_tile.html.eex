@@ -50,7 +50,7 @@
     <div class="d-flex flex-column pr-2 pr-sm-2 pr-md-0">
       <span>
       <div class="d-flex hash-copy-block">
-        <span class="tx-link">
+        <span class="tx-link underline">
           <%= render "_link.html", transaction_hash: @transaction.hash, data_test: "address_hash_link" %>
           <span
             aria-label='<%= gettext "Copy From Address" %>'
@@ -58,7 +58,7 @@
             class="btn-copy-icon-hash"
             data-placement='top'
             data-toggle='tooltip'
-            title='<%= gettext "Copy From Address" %>'
+            title='Copy Hash'
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.5 32.5" width="22" height="22">
               <path fill-rule="evenodd" d="M23.5 20.5a1 1 0 0 1-1-1v-9h-9a1 1 0 0 1 0-2h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zm-3-7v10a1 1 0 0 1-1 1h-10a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1zm-2 1h-8v8h8v-8z"/>
@@ -68,7 +68,7 @@
       </div>
       </span>
       <span class="address-link">
-        <span class="address-link-underline"><%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> BlockScoutWeb.RenderHelpers.render_partial() %></span>
+        <span class="address-link-underline-span"><%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> BlockScoutWeb.RenderHelpers.render_partial() %></span>
         <span> → </span>
         <span class="address-link-underline"><%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:to, assigns[:current_address]) |> BlockScoutWeb.RenderHelpers.render_partial() %></span>
       </span>
