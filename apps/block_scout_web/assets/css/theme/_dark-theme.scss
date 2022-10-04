@@ -619,7 +619,7 @@ $alert-warning-background: #f3f3f3;
 		}
 
 		&::placeholder {
-			color: $labels-dark;
+			color: rgba(255,255,255, 0.5);
 		}
 		&:focus {
 			background-color: $dark-light;
