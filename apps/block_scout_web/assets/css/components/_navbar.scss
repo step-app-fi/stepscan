@@ -22,6 +22,12 @@ $navbar-logo-width: 100% !default;
   @include media-breakpoint-down(md) {
     align-items: flex-start;
   }
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   .navbar-container {
     @include media-breakpoint-down(md) {
