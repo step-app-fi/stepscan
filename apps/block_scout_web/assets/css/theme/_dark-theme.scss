@@ -500,6 +500,9 @@ $alert-warning-background: #f3f3f3;
 	.tile-type-unique-token {
 		background-color: rgba(249, 213, 73, 0.5);
 	}
+	.tile-type-reorg .tile-transaction-type-block, .tile-type-reorg .tile-transaction-type-block a {
+		color: white
+	}
 
 	// download csv button
 	.download-all-transactions .download-all-transactions-link svg path {
