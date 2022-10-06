@@ -463,6 +463,30 @@ $alert-warning-background: #f3f3f3;
 		background-color: rgba($dark-primary, .15);
 		color: $labels-dark;
 	}
+	.badge.badge-danger {
+		background-color: #ed9966;
+	}
+	.badge.badge-success {
+		background-color: #15bba6;
+	}
+	.tile-type-transaction {
+		background-color: rgba(89, 155, 246, 0.4);
+	}
+	.tile-type-contract-call{
+		background-color: rgba(93, 139, 137, 0.7);
+	}
+	  
+	.tile-type-contract-creation {
+		background-color: rgba(198, 161, 195, 0.6);
+	}
+	  
+	.tile-type-token-transfer {
+		background-color: rgba(249, 213, 73, 0.5);
+	}
+	  
+	.tile-type-unique-token {
+		background-color: rgba(249, 213, 73, 0.5);
+	}
 
 	// download csv button
 	.download-all-transactions .download-all-transactions-link svg path {
