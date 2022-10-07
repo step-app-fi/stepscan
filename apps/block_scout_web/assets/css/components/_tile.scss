@@ -292,6 +292,7 @@ $tile-body-a-color: #5959d8 !default;
 
   a[data-test=token_link] {
     color: black;
+    text-transform: none;
   }
 
   .tile-body {
