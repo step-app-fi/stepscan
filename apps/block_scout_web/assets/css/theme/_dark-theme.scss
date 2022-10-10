@@ -238,7 +238,7 @@ $alert-warning-background: #f3f3f3;
 	.tile-bottom-contents {
 		background-color: transparent;
 	}
-	.tile-bottom-contents .tile-transactions {
+	.tile-bottom-contents .tile-transactions, .tile-transactions-processing, .tile-transactions {
 		color: white;
 	}
 	a.tile-title {
