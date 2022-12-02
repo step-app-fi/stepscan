@@ -1,7 +1,7 @@
-<div class='dashboard-banner-container' data-page="chain-details">
-    <div class="dashboard-banner">
+<div class='dashboard-banner-container' data-page="chain-details" style="height: unset; padding: 36px 0 60px;">
+    <div class="dashboard-banner" style="justify-content: center; align-items: center;">
       <!-- Graph and legend -->
-      <div class="dashboard-banner-network-graph">
+      <div class="dashboard-banner-network-graph" style="display: none;">
         <!-- Graph -->
         <div class="dashboard-banner-chart">
           <button data-chart-error-message class="alert alert-danger col-12 text-left mt-5" style="display: none;">
@@ -88,7 +88,7 @@
         </div>
       </div>
       <!-- Stats -->
-      <div class="dashboard-banner-network-plain-container">
+      <div class="dashboard-banner-network-plain-container" style="padding: 0; height: unset; max-width: unset;">
         <div class="dashboard-banner-network-stats">
           <%= case @average_block_time do %>
             <% {:error, :disabled} -> %>
