@@ -22,6 +22,16 @@
                 <% true -> %>
                   <%= nil %>
               <% end %>
+              <%= if System.get_env("DISPLAY_TOKEN_ICONS") === "true" do %>
+                <% chain_id_for_token_icon = Application.get_env(:block_scout_web, :chain_id) %>
+                <% address_hash = @token.contract_address_hash %>
+                <%=
+                  render BlockScoutWeb.TokensView,
+                  "_token_icon.html",
+                  chain_id: chain_id_for_token_icon,
+                  address: Address.checksum(address_hash)
+                %>
+              <% end %>
               <%= if token_name?(@token) do %>
                   <span
                     id="token-icon"
@@ -53,10 +63,10 @@
             <dd class="col-sm-8 col-md-8 col-lg-9 contract-address">
               <%= link(
                   @token.contract_address_hash,
-                  to: AccessHelpers.get_path(@conn, :address_path, :show, 
+                  to: AccessHelpers.get_path(@conn, :address_path, :show,
                   Address.checksum(@token.contract_address_hash)),
                   "data-test": "token_contract_address"
-                  ) 
+                  )
               %>
             </dd>
           </dl>
@@ -97,7 +107,7 @@
                     <span data-selector="token-price" data-usd-value="<%= @token.usd_value %>"></span>
                   </dd>
                 </dl>
-              <% end %>  
+              <% end %>
             <% end %>
           <% end %>
           <dl class="row">
@@ -133,7 +143,7 @@
                 <%= @token.decimals %>
               </dd>
             </dl>
-          <% end %>  
+          <% end %>
           <dl class="row">
             <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
