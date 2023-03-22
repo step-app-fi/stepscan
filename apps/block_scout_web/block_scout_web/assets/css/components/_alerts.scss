@@ -1,0 +1,17 @@
+$alert-danger-background-color: #fff3f7 !default;
+$alert-danger-border-color: #fff3f7 !default;
+$alert-danger-color: #ff7986 !default;
+
+.alert-danger {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    
+    span {
+        background-color: #D44333;
+        color: white;
+        border-radius: 96px;
+    }
+}

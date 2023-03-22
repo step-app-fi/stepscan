@@ -1,0 +1,32 @@
+@import '~@tarekraafat/autocomplete.js/dist/css/autoComplete.01.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0.03em;
+  
+  main {
+    flex-grow: 1;
+    background-color: #fff;
+
+    section {
+      @media (min-width: 1365px) {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+  }
+}
+
+.logs-hash {
+  line-height: 24px !important;
+}
+
+.indent {
+  @media (min-width: 992px) {
+    padding-left: 40px;
+  }
+}

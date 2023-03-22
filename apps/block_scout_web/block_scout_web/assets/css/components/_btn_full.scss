@@ -1,0 +1,9 @@
+$btn-full-primary-bg: black;
+$btn-full-primary-color: #fff !default;
+
+.btn-full-primary {
+  text-transform: uppercase;
+  border-radius: 8px;
+  height: 40px;
+  @include btn-full($btn-full-primary-bg, $btn-full-primary-color);
+}

@@ -1,0 +1,6 @@
+$btn-qr-color: black !default;
+$btn-qr-dimensions: 31px !default;
+
+.btn-qr-icon {
+  @include square-icon-button(black, $btn-qr-dimensions);
+}
